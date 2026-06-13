@@ -28,7 +28,7 @@ public class StudentServiceImpl implements StudentService {
 
 
         // Business rule 2: roll number must be unique
-        if (studentRepository.ExistByRollNumber(requestDTO.getRollNumber())) {
+        if (studentRepository.existsByRollNumber(requestDTO.getRollNumber())) {
             throw new DuplicateResourceException("Student already exists with RollNumber: " + requestDTO.getEmail());
         }
 

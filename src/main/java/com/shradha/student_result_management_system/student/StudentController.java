@@ -52,7 +52,7 @@ public class StudentController {
 
     }
 
-   @GetMapping("/update/{id}")
+   @PutMapping("/update/{id}")
     public ResponseEntity<StudentResponseDTO> updateStudent(@PathVariable Long id, @RequestBody @Valid StudentRequestDTO studentRequestDTO){
 
 
