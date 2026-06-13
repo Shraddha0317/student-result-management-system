@@ -2,28 +2,36 @@ package com.shradha.student_result_management_system.util;
 
 public class GradeCalculator {
 
-    private GradeCalculator(){}
+    // Private constructor — this is a utility class
+    // Nobody should instantiate it: new GradeCalculator() makes no sense
+    private GradeCalculator() {}
 
-    public static String calculateGrade(double percentage){
+    public static String calculateGrade(double marksObtained, int maxMarks) {
+
+        if (maxMarks <= 0) {
+            throw new IllegalArgumentException(
+                    "Max marks must be greater than zero"
+            );
+        }
+
+        double percentage = (marksObtained / maxMarks) * 100;
+
         if (percentage >= 90) return "A+";
-        else if (percentage >= 75) return "A";
-        else if (percentage >= 60) return "B";
-        else if (percentage >= 50) return "C";
-        else if (percentage >= 35) return "D";
-        else return "F";
-    }
-    public static String calculateResult(double percentage){
-
-        return percentage>=AppConstants.PASS_MARKS ? AppConstants.PASS :AppConstants.FAIL;
+        if (percentage >= 80) return "A";
+        if (percentage >= 70) return "B";
+        if (percentage >= 60) return "C";
+        if (percentage >= 50) return "D";
+        return "F";
     }
 
-
-    public static double calculatePercentage(double marksObtained, double totalMarks){
-   if(totalMarks ==0){
-       return 0;
-   }else{
-       return (marksObtained / totalMarks) * 100;
-   }
-
+    public static double calculatePercentage(double marksObtained,
+                                             int maxMarks) {
+        if (maxMarks <= 0) {
+            throw new IllegalArgumentException(
+                    "Max marks must be greater than zero"
+            );
+        }
+        // Round to 2 decimal places
+        return Math.round((marksObtained / maxMarks) * 100.0 * 100.0) / 100.0;
     }
 }
