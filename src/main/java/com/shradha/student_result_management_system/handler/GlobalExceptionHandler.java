@@ -95,6 +95,26 @@ public class GlobalExceptionHandler {
                 .body(response);
     }
 
+
+    // Add this handler BEFORE the generic Exception handler
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<ErrorResponseDTO> handleIllegalArgument(
+            IllegalArgumentException ex,
+            HttpServletRequest request) {
+
+        ErrorResponseDTO response = ErrorResponseDTO.builder()
+                .status(HttpStatus.BAD_REQUEST.value())
+                .error("Bad Request")
+                .message(ex.getMessage())
+                .path(request.getRequestURI())
+                .timestamp(LocalDateTime.now())
+                .build();
+
+        return ResponseEntity
+                .status(HttpStatus.BAD_REQUEST)
+                .body(response);
+    }
+
     // ── HANDLER 4 ──────────────────────────────────────────
     // Catches everything else → 500
     // MUST be last — most generic, lowest priority
@@ -116,4 +136,7 @@ public class GlobalExceptionHandler {
                 .status(HttpStatus.INTERNAL_SERVER_ERROR)
                 .body(response);
     }
+
+
+
 }
