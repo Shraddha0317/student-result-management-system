@@ -8,8 +8,8 @@ public class AppConstants {
         public static final int MAX_MARKS = 100;
         public static final int PASS_MARKS = 35;
 
-        public static final String PASS = "Pass";
-        public static final String FAIL = "Fail";
+        public static final String RESULT_PASS = "Pass";
+        public static final String RESULT_FAIL = "Fail";
 
     // Grade boundaries (percentage)
     public static final double GRADE_A_PLUS = 90.0;
