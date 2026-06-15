@@ -1,5 +1,5 @@
 # student-result-management-system
-Production-ready Student Result Management REST API built using Java 17, Spring Boot, MySQL, JUnit 5, Swagger/OpenAPI, and Docker.
+Production-ready Student Result Management REST API built using Java 17, Spring Boot, MySQL, JUnit 5, and Docker.
 
 ## **Project Overview**
 
@@ -14,7 +14,6 @@ Spring Boot
 Spring Data JPA
 MySQL
 JUnit 5
-Swagger OpenAPI 3
 Docker
 Maven
 
@@ -28,7 +27,6 @@ Maven
 ✔ Pagination & Sorting
 ✔ Global Exception Handling
 ✔ Input Validation
-✔ Swagger Documentation
 ✔ Unit Testing
 ✔ Docker Support
 
