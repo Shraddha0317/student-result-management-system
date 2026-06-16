@@ -1,4 +1,5 @@
-# 🎓 Student Result Management System
+# student-result-management-system
+Production-ready Student Result Management REST API built using Java 17, Spring Boot, MySQL, JUnit 5, and Docker.
 
 A production-grade REST API built with Spring Boot for managing students, subjects, marks, and result generation. Designed following enterprise-level architecture patterns including layered architecture, DTO pattern, global exception handling, and comprehensive unit testing.
 
@@ -7,7 +8,13 @@ A production-grade REST API built with Spring Boot for managing students, subjec
 
 ##  Overview
 
-The Student Result Management System is a backend REST API that allows educational institutions to:
+Java 17
+Spring Boot
+Spring Data JPA
+MySQL
+JUnit 5
+Docker
+Maven
 
 - Manage student records and subject catalogs
 - Record and update student marks per subject
@@ -16,6 +23,16 @@ The Student Result Management System is a backend REST API that allows education
 - Bulk upload students and marks via CSV files
 
 ---
+✔ Student CRUD
+✔ Subject CRUD
+✔ Marks Management
+✔ Grade Calculation
+✔ CSV Bulk Upload
+✔ Pagination & Sorting
+✔ Global Exception Handling
+✔ Input Validation
+✔ Unit Testing
+✔ Docker Support
 
 ##  Features
 

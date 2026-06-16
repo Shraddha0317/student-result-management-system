@@ -1,7 +1,0 @@
-com\shradha\student_result_management_system\dto\ErrorResponseDTO.class
-com\shradha\student_result_management_system\util\GradeCalculator.class
-com\shradha\student_result_management_system\util\AppConstants.class
-com\shradha\student_result_management_system\StudentResultManagementSystemApplication.class
-com\shradha\student_result_management_system\exception\DuplicateResourceException.class
-com\shradha\student_result_management_system\exception\ResourceNotFoundException.class
-com\shradha\student_result_management_system\handler\GlobalExceptionHandler.class
